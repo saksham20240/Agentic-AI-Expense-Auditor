@@ -1,4 +1,4 @@
-# Agentic-AI-Expense-Auditor
+# AgenticAI_Expense_Auditor
 An agentic AI system for expense auditing that combines deterministic policy enforcement with human-in-the-loop approval, built on LangGraph. It reads an expense report, checks every line against a configurable finance policy, flags anomalies such as duplicate claims, and routes anything that needs judgment to a finance manager — pausing execution indefinitely until a decision arrives, even if that means waiting through a server restart.
  
 This is not a chatbot wrapped around a prompt. It is an agentic workflow where the language model is used for exactly one task — summarizing flagged lines into a readable packet for a human reviewer — while every compliance decision that can be made deterministically (limit checks, receipt validation, duplicate detection, weekend-travel policy) is made in plain, auditable Python. The result is an agentic AI system where the parts that must be correct and explainable stay rule-based, and the part that benefits from language understanding is isolated, bounded, and easy to swap out.
